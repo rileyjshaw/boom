@@ -53,6 +53,7 @@
   }
 
   // Constants.
+  var html           = document.documentElement;
   var body           = document.body;
   var ACTIVE_CLASS   = 'boom-extension-active';
   var ACTIVE_STYLE   = 'cursor: crosshair !important';
@@ -81,13 +82,13 @@
   function toggleActive (forceFalse) {
     isActive = !forceFalse && !isActive;
     chrome.runtime.sendMessage(isActive);
-    body.classList[isActive ? 'add' : 'remove'](ACTIVE_CLASS);
+    html.classList[isActive ? 'add' : 'remove'](ACTIVE_CLASS);
   }
 
   // Add styles to the bottom of the page.
   var styleEl = document.createElement('style');
   var cssContent =
-      '.' + ACTIVE_CLASS   + ' *{'       + ACTIVE_STYLE   + '}\n' +
+      '.' + ACTIVE_CLASS   + '{'         + ACTIVE_STYLE   + '}\n' +
       '.' + ACTIVE_CLASS   + ' *:hover{' + ACTIVE_STYLE   + '}\n' +
       '.' + HOVER_CLASS    + '{'         + HOVER_STYLE    + '}\n' +
       '.' + EXPANDED_CLASS + '{'         + EXPANDED_STYLE + '}\n' ;
