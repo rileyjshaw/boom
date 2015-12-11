@@ -1,11 +1,12 @@
 {
-  "name": "Boom!",
+  "name": "boom! – Declutter pages, improve readability",
+  "short_name": "boom!",
   "applications": {
     "gecko": {
       "id": "boom@rileyjshaw.com"
     }
   },
-  "description": "Declutter webpages... Point, click, boom!",
+  "description": "Declutter webpages and improve readability... Point, click, boom!",
   "background": {
     "scripts": [ "background.js" ]
   },
