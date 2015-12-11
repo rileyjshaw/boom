@@ -7,9 +7,10 @@
   // Util: blocks an event while extension is active, and optionally runs `fn`.
   function boomListener (el, event, fn) {
     el.addEventListener(event, function (e) {
-      if (!isActive) return; // Early exit.
+      if (!isActive) return; // Early exit, don't block the event.
+      // If the passed `fn` returns `true`, don't block the event.
+      if (typeof fn === 'function' && fn(e)) return;
 
-      if (typeof fn === 'function') fn(e);
       e.preventDefault();
       e.stopPropagation();
       return false;
@@ -22,8 +23,8 @@
     if (lastHoveredEl.classList) lastHoveredEl.classList.remove(HOVER_CLASS);
     hoveredEl.classList.add(HOVER_CLASS);
     lastHoveredEl = hoveredEl;
+    return true;
   }
-
   // Expand the clicked element for readability if "shift" is held, otherwise
   // destroy it.
   function handleMouseDown (e) {
@@ -46,6 +47,7 @@
   // Deactivate the extension if "esc" is pressed.
   function handleKeyDown (e) {
     if (e.keyCode === 27) toggleActive(true);
+    else return true;
   }
 
   // Constants.
