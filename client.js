@@ -21,8 +21,10 @@
     var hoveredEl = document.elementFromPoint(e.clientX, e.clientY);
 
     if (lastHoveredEl.classList) lastHoveredEl.classList.remove(HOVER_CLASS);
-    hoveredEl.classList.add(HOVER_CLASS);
-    lastHoveredEl = hoveredEl;
+    if (hoveredEl !== body) {
+      hoveredEl.classList.add(HOVER_CLASS);
+      lastHoveredEl = hoveredEl;
+    } else lastHoveredEl = {};
     return true;
   }
   // Expand the clicked element for readability if "shift" is held, otherwise
@@ -42,7 +44,7 @@
           el.style.setProperty('max-width', 'initial', 'important');
         }
       });
-    } else target.parentElement.removeChild(target);
+    } else target !== body && target.parentElement.removeChild(target);
   }
   // Deactivate the extension if "esc" is pressed.
   function handleKeyDown (e) {
