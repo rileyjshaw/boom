@@ -1,4 +1,4 @@
-![boom!](./banner.png)
+![boom!](./banner-cropped.png)
 ---
 This is an unpublished Chrome extension that I found on an old hard drive. I might write a proper README for it someday.
 
