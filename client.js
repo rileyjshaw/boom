@@ -95,6 +95,7 @@
       '.' + HOVER_CLASS    + '{'         + HOVER_STYLE    + '}\n' +
       '.' + EXPANDED_CLASS + '{'         + EXPANDED_STYLE + '}\n' ;
 
+  styleEl.id = 'boom-extension-css-block';
   styleEl.appendChild(document.createTextNode(cssContent));
   body.appendChild(styleEl);
 
