@@ -11,7 +11,7 @@
   // Get the active tabId, save it, and initialize the extension.
   chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
     // Set the current active tab.
-    activeTabId = tabs[0].id;
+    activeTabId = tabs[0] && tabs[0].id;
 
     // Attach event listeners.
     // Dispatch browser actions to the active tab.
