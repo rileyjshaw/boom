@@ -83,6 +83,8 @@
     isActive = !forceFalse && !isActive;
     chrome.runtime.sendMessage(isActive);
     html.classList[isActive ? 'add' : 'remove'](ACTIVE_CLASS);
+    if (lastHoveredEl.classList) lastHoveredEl.classList.remove(HOVER_CLASS);
+    lastHoveredEl = {};
   }
 
   // Add styles to the bottom of the page.
