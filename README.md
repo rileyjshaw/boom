@@ -1,6 +1,15 @@
 ![boom!](./banner-cropped.png)
 ---
-This is an unpublished Chrome extension that I found on an old hard drive. I might write a proper README for it someday.
+
+## Declutter the internet
+**Before:**
+![A cluttered time.com article](./before.png)
+
+**After:**
+![A time.com article with the advertisements, social links, etc. removed](./after.png)
+
+## Hide upsells and paywalls
+![Hiding Pinterest's paywall with boom!](./upsell.gif)
 
 ## Usage
 Click the bomb icon. The fuse should light. At this point, you can:
