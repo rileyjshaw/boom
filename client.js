@@ -58,7 +58,7 @@
   var ACTIVE_CLASS   = 'boom-extension-active';
   var ACTIVE_STYLE   = 'cursor: crosshair !important';
   var HOVER_CLASS    = 'boom-extension-hovered-element';
-  var HOVER_STYLE    = 'outline: 2px solid #9ab !important';
+  var HOVER_STYLE    = 'outline: 2px solid rgba(130, 170, 210, .6) !important';
   var EXPANDED_CLASS = 'boom-extension-expanded-element';
   var EXPANDED_STYLE = [
     'background:    transparent',
