@@ -20,7 +20,9 @@
     });
     // When the active tab switches, disable extension for the previous tab.
     chrome.tabs.onActivated.addListener(function (newTab) {
-      chrome.tabs.sendMessage(activeTabId, true);
+      if (typeof activeTabId === 'number') {
+        chrome.tabs.sendMessage(activeTabId, true);
+      }
       activeTabId = newTab.tabId;
     });
     // Listen for messages from the current tab to update the action icon.
