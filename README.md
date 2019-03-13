@@ -15,7 +15,7 @@ boom! lets you knock down annoying paywalls.
 ![Hiding Pinterest's paywall with boom!](./upsell.gif)
 
 ## Sound cool?
-Check it out on the [Chrome Web Store](https://goo.gl/Jjyid5).
+Get it on [Firefox](https://addons.mozilla.org/addon/boom-readability/) or [Chrome](https://goo.gl/Jjyid5).
 
 ## Usage
 Click the bomb icon. The fuse should light. At this point, you can:
