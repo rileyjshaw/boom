@@ -20,7 +20,7 @@
     "16": "icon16.png"
   },
   "manifest_version": 2,
-  "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+  "permissions": [ "http://*/*", "https://*/*" ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -34,5 +34,5 @@
     "icon38.png",
     "icon38-active.png"
   ],
-  "version": "1.1.1"
+  "version": "1.1.2"
 }
